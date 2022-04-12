@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <element name="plants">
+    <complexType>
+      <sequence>
+        <element name="plant" maxOccurs="unbounded">
+          <complexType>
+            <sequence>
+              <element name="name" type="string" />
+              <element name="soil">
+                <simpleType>
+                  <restriction base="string">
+                    <enumeration value="PODZOLIC"/>
+                    <enumeration value="UNPAVED"/>
+                    <enumeration value="SOD-PODZOLIC"/>
+                  </restriction>
+                </simpleType>
+              </element>
+              <element name="origin" type="string"/>
+              <element name="visualParameters">
+                <complexType>
+                  <sequence>
+                    <element name="stemColor" type="string" />
+                    <element name="leafPresence" type="boolean" />
+                    <element name="averagePlantSize">
+                      <simpleType>
+                        <restriction base="double">
+                          <minInclusive value="0.1"/>
+                        </restriction>
+                      </simpleType>
+                    </element>
+                  </sequence>
+                </complexType>
+              </element>
+              <element name="growingTips">
+                <complexType>
+                  <sequence>
+                    <element name="temperature">
+                      <simpleType>
+                        <restriction base="double">
+                          <minInclusive value="-20"/>
+                          <maxInclusive value="40"/>
+                        </restriction>
+                      </simpleType>
+                    </element>
+                    <element name="lighting" type="boolean" />
+                    <element name="watering" type="positiveInteger" />
+                  </sequence>
+                </complexType>
+              </element>
+              <element name="multiplying">
+                <simpleType>
+                  <restriction base="string">
+                    <enumeration value="STALKS"/>
+                    <enumeration value="SEEDS"/>
+                    <enumeration value="LEAVES"/>
+                  </restriction>
+                </simpleType>
+              </element>
+            </sequence>
+            <attribute name="id" type="string" use="required" />
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

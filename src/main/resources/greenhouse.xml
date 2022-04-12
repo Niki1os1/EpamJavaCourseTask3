@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="greenhouse.xsd">
+    <plant id="pl#1">
+        <name>Rose</name>
+        <soil>PODZOLIC</soil>
+        <origin>Persia</origin>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leafPresence>true</leafPresence>
+            <averagePlantSize>15</averagePlantSize>
+        </visualParameters>
+        <growingTips>
+            <temperature>21</temperature>
+            <lighting>true</lighting>
+            <watering>10000</watering>
+        </growingTips>
+        <multiplying>STALKS</multiplying>
+    </plant>
+    <plant id="pl#2">
+        <name>Chamomile</name>
+        <soil>UNPAVED</soil>
+        <origin>Eurasia</origin>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leafPresence>true</leafPresence>
+            <averagePlantSize>10</averagePlantSize>
+        </visualParameters>
+        <growingTips>
+            <temperature>18</temperature>
+            <lighting>true</lighting>
+            <watering>4000</watering>
+        </growingTips>
+        <multiplying>SEEDS</multiplying>
+    </plant>
+</plants>
